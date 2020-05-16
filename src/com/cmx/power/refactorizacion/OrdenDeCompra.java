@@ -6,15 +6,13 @@ import java.util.List;
 public class OrdenDeCompra {
     private String  id;
     private Cliente cliente;
-    List<String> items = new ArrayList<>();
-    int totalItems=0;
+    List<Cliente> items = new ArrayList<>();
 
-    public void agregarCliente(String codigo, String nombre, double precio){
-        items.add(new String[]{codigo, nombre, String.valueOf(precio)});
-        totalItems++;
+    public void agregarCliente(Cliente _cliente){
+        items.add(_cliente);
     }
 
     public int getTotalItems() {
-        return this.totalItems;
+        return this.items.size();
     }
 }
